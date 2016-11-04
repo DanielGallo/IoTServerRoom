@@ -60,6 +60,7 @@ module.exports = class Motion extends Sensor {
             s3bucketName = 'danieljgallo-iot-data',
             s3bucket;
         
+        // Captured photos from the USB webcam will be published to Amazon S3
         s3bucket = new aws.S3({
             params: {
                 Bucket: s3bucketName

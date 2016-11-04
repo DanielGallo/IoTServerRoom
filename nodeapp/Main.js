@@ -3,9 +3,7 @@ var jfive = require('johnny-five'),
     aws = require('aws-sdk'),
     uuid = require('node-uuid'),
     fs = require('fs'),
-    childProcess = require('child_process'),
-    s3bucketName = 'danieljgallo-iot-data',
-    board, s3bucket;
+    board;
 
 board = new jfive.Board({
     io: new Edison({
@@ -13,13 +11,6 @@ board = new jfive.Board({
             bus: 6
         }
     })
-});
-
-// Captured photos from the USB webcam will be published to Amazon S3
-s3bucket = new aws.S3({
-    params: {
-        Bucket: s3bucketName
-    }
 });
 
 board.on('ready', function() {
