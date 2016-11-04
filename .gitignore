@@ -1,0 +1,22 @@
+# Folders & IDEs
+.idea
+.classpath
+.project
+.settings
+
+# Files
+__MACOSX
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# Ext JS app
+clientapp/build/
+clientapp/ext/
+clientapp/packages/
+clientapp/bootstrap.*
+
+# Node app
+IoTSensors.xdke

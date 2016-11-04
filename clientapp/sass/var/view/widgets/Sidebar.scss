@@ -1,0 +1,44 @@
+$sidebar-color: dynamic($panel-body-color);
+
+$sidebar-background-color: dynamic($background-color);
+
+$sidebar-font-size: dynamic(1.1rem);
+
+$sidebar-font-size-big: dynamic(1rem);
+
+$sidebar-item-padding: dynamic(1.25rem);
+
+$sidebar-item-padding-big: dynamic(1.3rem);
+
+$sidebar-icon-size: dynamic(1.6rem);
+
+$sidebar-icon-size-big: dynamic(1.6rem);
+
+$sidebar-icon-horizontal-spacing: dynamic($sidebar-item-padding);
+
+$sidebar-icon-horizontal-spacing-big: dynamic($sidebar-item-padding-big);
+
+$sidebar-slide-width: 75vw;
+
+$sidebar-micro-width: 50px;
+
+$sidebar-micro-expanded-width: 256px;
+
+@mixin sidebar-ui(
+  $ui: null,
+  $color: null,
+  $background-color: null
+) {
+  $ui-suffix: ui-suffix($ui);
+
+  @if $background-color != null and $background-color != transparent {
+    @if $color == null {
+      $color: color-by-background($background-color);
+    }
+  }
+
+  .sidebar-inner#{$ui-suffix} {
+    background-color: $background-color;
+    color: $color;
+  }
+}

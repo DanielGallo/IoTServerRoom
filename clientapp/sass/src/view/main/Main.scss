@@ -1,0 +1,233 @@
+$base-color: #3F51B5;
+$accent-light-color: #f48fb1;
+
+
+h1, h2, h3 {
+    font-size: 125%;
+    font-weight: bolder;
+}
+
+a, a:visited {
+    color: #283593;
+}
+
+.mainHeader {
+    background-color: $neutral-dark-color;
+    color: white;
+}
+
+.x-big .x-toolbar-inner {
+    padding: 0px;
+}
+
+.x-big .x-button {
+    padding: 0.7em;
+}
+
+.menubutton {
+    height: 50px;
+    width: 50px;
+    font-size: 1.6rem;
+}
+
+.valuePanel .x-container-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span.value {
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+span.measurement {
+    font-size: 122%;
+}
+
+.x-title .x-innerhtml {
+    font-size: 110%;
+    font-weight: normal;
+    padding-left: 8px;
+}
+
+div .title {
+    font-size: 122%;
+    width: 100%;
+    padding-bottom: 18px;
+}
+
+.valuePanel .x-container-inner {
+    padding-left: 12px;
+    color: white;
+    font-size: 120%;
+}
+
+.warning {
+    color: red;
+}
+
+.alarmpanel .x-container-inner .x-innerhtml {
+    height: 100%;
+}
+
+.alarmpanel .x-container-inner .x-innerhtml div {
+    padding-bottom: 48px;
+    padding-top: 20px;
+}
+
+/*
+    Vertical toolbar on the ValuePanel - maximize space by removing left padding
+*/
+.dashboard-item .x-panel-header.x-docked-right {
+    padding-left: 0px;
+}
+
+
+.x-toolbar-inner .x-title div {
+    color: white;
+    padding: 5px;
+}
+
+.x-toolbar, .x-titlebar {
+    border-top: 0px;
+    box-shadow: none;
+    z-index: 1;
+}
+
+.x-toolbar.x-docked-top, .x-toolbar.x-docked-right, .x-panel-header {
+    box-shadow: none;
+    transition: none;
+    z-index: 1;
+}
+
+
+/*
+    Alarm panel - positioning of the alert icon and formatting of text
+*/
+div.alarmContainer {
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: calc(50% - 130px);
+}
+
+span.alarmMessage {
+    font-size: 120%;
+}
+
+span.alarm {
+    font-size: 175px;
+    line-height: 1;
+    color: #FFF;
+}
+
+
+.x-button, .x-button-pressing, .x-button-alt {
+    background-color: transparent;
+}
+
+
+/*
+    Reposition the badge text on the Alerts tab, so that it hovers just to the left of the tab's icon.
+*/
+.x-tab .x-badge {
+    top: 1px;
+    left: calc(50% - 38px);
+}
+
+.x-button .x-badge {
+    top: -13px;
+    left: -13px;
+    background-color: rgb(68, 68, 68);
+    color: white;
+    //background-image: webkit-linear-gradient(top, #ffb74d, #ffa21a 3%, #e68900);
+}
+
+.x-button .x-button-icon {
+    color: white;
+}
+
+/*.x-tabbar-inner {
+    padding: 0;
+}*/
+
+/*.x-tab .x-button-icon {
+    width: 20px;
+    height: 20px;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.x-tab .x-button-label {
+    display: none;
+}*/
+
+
+.d3-heatmap {
+  rect.bordered {
+    stroke: #78909C;
+    stroke-width: 2px;
+  }
+
+  text.mono {
+    font-size: 9pt;
+    font-family: Roboto, sans-serif;
+    fill: #ccc;
+  }
+
+  text.axis-workweek {
+    fill: #fff;
+  }
+
+  text.axis-worktime {
+    fill: #fff;
+  }
+}
+
+
+
+
+.shadow {
+    @include box-shadow(0 1px 2px 0 rgba(0,0,0,0.2));
+}
+
+$dashboard-item-spacing: 20px;
+
+.dashboard > * > .x-inner {
+    padding: $dashboard-item-spacing 0 0 $dashboard-item-spacing;
+}
+
+.dashboard-item {
+    margin: 0 $dashboard-item-spacing $dashboard-item-spacing 0;
+    float: left;
+}
+
+.small-100 {
+    width: calc(100% - #{$dashboard-item-spacing});
+}
+
+.small-50 {
+    width: calc(50% - #{$dashboard-item-spacing});
+}
+
+@media (min-width: 720px) {
+    .medium-50 {
+        width: calc(50% - #{$dashboard-item-spacing});
+    }
+
+    .medium-25 {
+        width: calc(25% - #{$dashboard-item-spacing});
+    }
+}
+
+@media (min-width: 1500px) {
+    .big-50 {
+        width: calc(50% - #{$dashboard-item-spacing});
+    }
+
+    .big-25 {
+        width: calc(25% - #{$dashboard-item-spacing});
+    }
+}

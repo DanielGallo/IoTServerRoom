@@ -1,0 +1,91 @@
+.sidebar {
+  > .x-dock,
+  > .x-inner {
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    padding: 0;
+
+    .slide& {
+      @include transition-property(margin-left);
+      @include transition-duration(0.25s);
+      width: $sidebar-slide-width;
+
+      .x-docked-left& {
+        margin-left: -$sidebar-slide-width;
+
+        .expanded& {
+          margin-left: 0;
+        }
+      }
+
+      .x-docked-right& {
+        margin-left: 0;
+
+        .expanded& {
+          margin-left: -$sidebar-slide-width;
+        }
+      }
+    }
+
+    .micro& {
+      .x-docked-left& {
+        @include transition-property(width);
+        @include transition-duration(0.25s);
+        width: $sidebar-micro-width;
+
+        > div {
+          width: $sidebar-micro-expanded-width;
+        }
+
+        .expanded& {
+          width: $sidebar-micro-expanded-width;
+        }
+      }
+
+      .x-docked-right& {
+        @include transition-property(margin-left);
+        @include transition-duration(0.25s);
+        width: $sidebar-micro-expanded-width;
+        margin-left: 0;
+
+        .expanded& {
+          margin-left: calc(-#{$sidebar-micro-expanded-width} + #{$sidebar-micro-width});
+        }
+      }
+    }
+  }
+
+  &.slide {
+    width: 0;
+  }
+
+  &.micro {
+    width: $sidebar-micro-width;
+  }
+}
+
+.sidebar-mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+
+  .sidebar.expanded > & {
+    display: block;
+  }
+}
+
+@include sidebar-ui(
+  $color: $sidebar-color,
+  $background-color: $sidebar-background-color
+);
+
+@include sidebar-ui(
+  $ui: 'dark',
+  $color: $neutral-light-color,
+  $background-color: $neutral-dark-color
+);

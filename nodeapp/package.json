@@ -1,0 +1,16 @@
+{
+  "name": "ServerRoomMonitor",
+  "description": "Monitors various server room sensors, such as temperature, air quality etc, and captures images from a security camera (webcam) on activation of motion sensor.",
+  "version": "1.0.0",
+  "main": "Main.js",
+  "engines": {
+    "node": ">=6.7.0"
+  },
+  "dependencies": {
+    "johnny-five": "0.10.3",
+    "edison-io": "0.9.4",
+    "pubnub": "3.16.4",
+    "node-uuid": "1.4.7",
+    "jsupm_grove": "1.0.0-src"
+  }
+}

@@ -1,0 +1,24 @@
+/*
+ * This is is imported by virtue of "sass.etc" in "app.json".
+ */
+
+// Cross-browser support for flex-wrap (IE10+)
+// https://msdn.microsoft.com/en-us/library/hh673531(v=vs.85).aspx
+// https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap
+@mixin st-box-wrap($wrap: wrap) {
+  -webkit-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@function contrasted($color, $percent: 50%) {
+  @if $percent < 0 {
+    $dark: lighten($color, -$percent);
+    $light: darken($color, -$percent);
+  } @else {
+    $dark: darken($color, $percent);
+    $light: lighten($color, $percent);
+  }
+
+  @return if(brightness($color) > 50, $dark, $light);
+}

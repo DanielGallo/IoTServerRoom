@@ -1,0 +1,97 @@
+/*
+ * This is is imported by virtue of "sass.var" in "app.json".
+ */
+
+$enable-font-awesome: dynamic(true);
+
+// Compass
+$default-text-shadow-color: rgba(black, 0.25);
+$default-text-shadow-blur: 1px;
+$default-text-shadow-v-offset: 1px;
+$default-box-shadow-color: rgba(black, 0.2);
+$default-box-shadow-h-offset: 0;
+$default-box-shadow-v-offset: 0;
+$default-box-shadow-spread: 1px;
+$default-box-shadow-blur: 2px;
+$default-border-radius: 6px;
+
+// Global_CSS
+// Base color scheme
+//$base-color: #3cc8cd;
+$base-dark-color: #257c80;
+$base-light-color: #73EBEB;
+
+// Neutral color scheme
+$neutral-color: #aaa;
+$neutral-dark-color: #444;
+$neutral-medium-dark-color: contrasted($neutral-color, 20%);
+$neutral-highlight-color: #d5d5d5;
+$neutral-light-color: #f5f5f5;
+
+$color: #0d1114;
+$highlight-color: #333;
+$background-color: white;
+$confirm-color: $base-color;
+$font-size-big: pxToRootPct(14px);
+
+// Ext.Panel
+// We want buttons in panel header to touch the header borders, so remove
+// the header padding and introduce $panel-header-title-padding variables.
+$panel-header-padding: 0;
+$panel-header-padding-big: 0;
+$panel-header-title-padding: dynamic(0.75em 1em);
+$panel-header-title-padding-big: dynamic(0.9rem);
+
+$panel-header-color: $panel-body-color;
+$panel-header-background-color: contrasted($panel-body-background-color, -5%);
+$panel-header-border-width: 0;
+$panel-header-font-weight: 400;
+
+// Ext.Button
+$button-line-height: 1.1em;
+$button-icon-horizontal-spacing: 0.4em;
+$button-icon-horizontal-spacing-big: 0.4em;
+$button-padding: 1em;
+$button-padding-big: 0.825em 1.4em;
+
+// Ext.Toolbar
+$toolbar-horizontal-spacing: 4px;
+$toolbar-horizontal-spacing-big: 4px;
+$toolbar-padding: 0px;
+
+// Ext.Sheet
+$sheet-border-color: transparent;
+
+// Ext.dataview.DataView
+// Remove dataview background to use the parent one.
+$dataview-background-color: null;
+
+// Ext.dataview.List
+$listitem-selected-color: contrasted($base-light-color, -25%);
+$listitem-selected-background-color: contrasted($base-color, 5%);
+$listitem-background-color: contrasted($background-color, -5%);
+$listitem-alt-background-color: contrasted($listitem-background-color, 2%);
+$listitem-line-height: 1.35em;
+
+// Ext.dataview.ItemHeader
+$itemheader-color: $base-color;
+$itemheader-background-color: $listitem-background-color;
+$itemheader-border-style: none;
+$itemheader-font-size: 1em;
+$itemheader-font-size-big: 1em;
+$itemheader-font-weight: bold;
+
+// Ext.grid.Row
+$gridrow-pressed-background-color: #E8EAF6;
+$gridrow-selected-background-color: #9FA8DA;
+$gridrow-pressed-color: #000;
+$gridrow-selected-color: #000;
+
+// Ext.grid.RowHeader
+$grid-group-header-background-color: #5C6BC0;
+
+// Ext.grid.column.Column
+$gridcolumn-background-color: #616161;
+$gridcolumn-border-color: transparent;
+$gridcolumn-color: white;
+$gridcolumn-sort-icon-color: white;
